@@ -51,9 +51,9 @@ class DiaryEntry(object):
                      "<title>%s</title>"
                      "<summary>%s</summary>"
                      "</entry>")
-  def __init__(self):
-    self.title = ''
-    self.body = ''
+  def __init__(self, title='', body=''):
+    self.title = title
+    self.body = body
 
   def toxml(self):
     return self._bodyxml_format % (self.title, self.body)
